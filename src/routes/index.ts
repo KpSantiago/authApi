@@ -11,8 +11,8 @@ const router = Router()
 
 router.post('/cadastro', signUpValidation , UsuariosController.signUp)
 router.post('/Login', signInValidation, UsuariosController.signIn)
-router.post('/send-email', Validation ,RecoverMail, UsuariosController.recoverMail)
-router.put('/forgot-pass/:id', Validation ,ForgotPassword, UsuariosController.updatePass)
+router.post('/send-email', RecoverMail, UsuariosController.recoverMail)
+router.put('/forgot-pass/:id', ForgotPassword, UsuariosController.updatePass)
 
 router.post('/Role', RolesController.create )
 
