@@ -34,13 +34,14 @@ export const signUp = async (req: Request<{}, {}, IUsuario>, res: Response) =>{
 
     try {
         const hashPassword = await bcrypt.hash(password, 10)
+        const userRole = roleId || 1
         const user = await prisma.user.create({
             data:{
                 name,
                 email,
                 password: hashPassword,
                 cpf,
-                roleId
+                roleId: userRole
             }
         });
        
