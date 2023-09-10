@@ -9,5 +9,5 @@ export interface IUsuario {
     email: string;
     password: string;
     cpf: string;
-    roleId: number;
+    roleId?: number;
 }

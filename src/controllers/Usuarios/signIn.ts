@@ -38,7 +38,7 @@ export const signIn = async (
 			return res.status(StatusCodes.UNAUTHORIZED).json({
 				default: {
 					error: {
-						msg: "Usuario não encontrado",
+						msg: "Email ou senha incorretos",
 					},
 				},
 			});
@@ -61,6 +61,7 @@ export const signIn = async (
 		return res.status(StatusCodes.OK).json({
 			msg: "Logado com sucesso",
 			roleId: user.roleId,
+			id: user.id,
 			acessToken: token,
 		});
 	} catch (error) {
