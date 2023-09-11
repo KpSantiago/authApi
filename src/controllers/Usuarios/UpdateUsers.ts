@@ -22,10 +22,7 @@ export const AttUsers = validation((getSchema) => ({
 	),
 }));
 
-export const update = async (
-	req: Request<IParamProps, {}, IBodyProps>,
-	res: Response
-) => {
+export const update = async (req: Request, res: Response) => {
 	try {
 		const { id } = req.params;
 		const { name, email, roleId } = req.body;
