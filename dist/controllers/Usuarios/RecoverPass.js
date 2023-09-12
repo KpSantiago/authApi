@@ -105,7 +105,7 @@ const recoverMail = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
           height: fit-content;
           padding: 5px 8px;
           border-radius: 6px;
-          font-size: 14px;" href="http://localhost:4200/new/${usuario.id}">Clique aqui!</a>
+          font-size: 14px;" href="https://auth-project-9ddj.onrender.com/new/${usuario.id}">Clique aqui!</a>
         </p>
         </div>
         </div>
