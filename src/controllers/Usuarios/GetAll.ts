@@ -15,7 +15,7 @@ export const GetAll: RequestHandler = async (req, res) => {
 				},
 			},
 			orderBy: {
-				id: "asc",
+				roleId: "desc",
 			},
 		});
 		return res.status(StatusCodes.OK).json(response);
