@@ -122,7 +122,7 @@ export const updatePass = async (
 
 		const updatePass = await prisma.user.update({
 			where: {
-				id,
+				id: Number(id),
 			},
 			data: {
 				password: hashPassword,
